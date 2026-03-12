@@ -62,6 +62,8 @@ The user might give you everything upfront, or they might just say "I found a bu
 
 5. **Keep the tone respectful and collaborative.** These reports are sent to partners and providers. Stick to describing what happened factually — don't assign blame, say things like "this is not a user error", or imply the provider made a mistake. The facts speak for themselves. If you've done debugging to narrow the cause, present findings as helpful context (e.g., "We noticed the endpoint returns a 404") rather than accusations.
 
+6. **Remove personal details.** Don't include personal names, personal space/account names, or other identifying info in the report. Use generic descriptions instead (e.g., "a space on the za-1 cluster" not "the Jane space"). Do include technical identifiers (build IDs, capsule IDs, error codes) that developers would need to investigate the issue.
+
 ## Output
 
 Whether the report is complete or still a draft with gaps, always use the exact Ritza format with the `## What I did` / `## What I expected to happen` / `## What actually happened` headers.
