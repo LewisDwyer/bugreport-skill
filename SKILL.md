@@ -72,9 +72,22 @@ Whether the report is complete or still a draft with gaps, always use the exact 
 
 Once you have a complete report (all four sections filled in), produce the final formatted bug report as a clean markdown block the user can copy.
 
-Always include the posting reminder — even when still gathering info, so the user knows the workflow:
+## Publishing
 
-> When this report is ready, post it to https://drafts.cc.ritza.co and share the link in the relevant **#ritza-&lt;customer&gt;** Slack channel.
+Once the user approves the final report, publish it automatically to drafts.cc.ritza.co (a HedgeDoc instance). Use this curl command:
+
+```bash
+DRAFT_URL=$(curl -s -X POST "https://drafts.cc.ritza.co/new" \
+  -H "Content-Type: text/markdown" \
+  -d "<report markdown>" \
+  -o /dev/null -w "%{redirect_url}")
+```
+
+This creates a new note and returns the URL. Show the user the link and remind them to share it in the relevant **#ritza-&lt;customer&gt;** Slack channel.
+
+If the report is still a draft with gaps, don't publish yet — just remind the user:
+
+> When this report is ready, I'll publish it to drafts.cc.ritza.co for you.
 
 ## Example
 
