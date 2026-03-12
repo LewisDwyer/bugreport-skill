@@ -60,6 +60,8 @@ The user might give you everything upfront, or they might just say "I found a bu
 
 4. **Keep the summary crisp.** It should read like a subject line — e.g., "500 error when signing in with SSO" not "There's a problem with the login page."
 
+5. **Keep the tone respectful and collaborative.** These reports are sent to partners and providers. Stick to describing what happened factually — don't assign blame, say things like "this is not a user error", or imply the provider made a mistake. The facts speak for themselves. If you've done debugging to narrow the cause, present findings as helpful context (e.g., "We noticed the endpoint returns a 404") rather than accusations.
+
 ## Output
 
 Whether the report is complete or still a draft with gaps, always use the exact Ritza format with the `## What I did` / `## What I expected to happen` / `## What actually happened` headers.
